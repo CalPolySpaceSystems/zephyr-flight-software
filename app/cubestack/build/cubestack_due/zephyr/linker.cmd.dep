@@ -1,0 +1,24 @@
+zephyr/linker.cmd: \
+ /home/pchizek/zephyr/arch/arm/soc/atmel_sam/sam3x/linker.ld \
+ /home/pchizek/zephyr/include/arch/arm/cortex_m/scripts/linker.ld \
+ /home/pchizek/zephyr-flight-software/cubestack/build/cubestack_due/zephyr/include/generated/autoconf.h \
+ /home/pchizek/zephyr/include/linker/sections.h \
+ /home/pchizek/zephyr/include/linker/section_tags.h \
+ /home/pchizek/zephyr/include/toolchain.h \
+ /home/pchizek/zephyr/include/toolchain/gcc.h \
+ /home/pchizek/zephyr/include/toolchain/common.h \
+ /home/pchizek/zephyr-flight-software/cubestack/build/cubestack_due/zephyr/include/generated/generated_dts_board.h \
+ /home/pchizek/zephyr/include/linker/linker-defs.h \
+ /home/pchizek/zephyr/include/misc/util.h \
+ /home/pchizek/zephyr/include/linker/linker-tool.h \
+ /home/pchizek/zephyr/include/linker/linker-tool-gcc.h \
+ /home/pchizek/zephyr/include/linker/priv_stacks-text.ld \
+ /home/pchizek/zephyr/include/linker/kobject-text.ld \
+ /home/pchizek/zephyr/include/linker/common-rom.ld \
+ /home/pchizek/zephyr/include/linker/priv_stacks-rom.ld \
+ /home/pchizek/zephyr/include/linker/kobject-rom.ld \
+ /home/pchizek/zephyr-flight-software/cubestack/build/cubestack_due/zephyr/include/generated/app_data_alignment.ld \
+ /home/pchizek/zephyr/include/linker/common-ram.ld \
+ /home/pchizek/zephyr/include/linker/priv_stacks.ld \
+ /home/pchizek/zephyr/include/linker/kobject.ld \
+ /home/pchizek/zephyr/include/linker/intlist.ld

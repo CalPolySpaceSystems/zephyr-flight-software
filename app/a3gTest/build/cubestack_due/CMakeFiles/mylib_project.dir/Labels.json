@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/pchizek/zephyr-flight-software/app/a3gTest/build/cubestack_due/CMakeFiles/mylib_project"
+		},
+		{
+			"file" : "/home/pchizek/zephyr-flight-software/app/a3gTest/build/cubestack_due/CMakeFiles/mylib_project.rule"
+		},
+		{
+			"file" : "/home/pchizek/zephyr-flight-software/app/a3gTest/build/cubestack_due/CMakeFiles/mylib_project-complete.rule"
+		},
+		{
+			"file" : "/home/pchizek/zephyr-flight-software/app/a3gTest/build/cubestack_due/mylib/src/mylib_project-stamp/mylib_project-install.rule"
+		},
+		{
+			"file" : "/home/pchizek/zephyr-flight-software/app/a3gTest/build/cubestack_due/mylib/src/mylib_project-stamp/mylib_project-mkdir.rule"
+		},
+		{
+			"file" : "/home/pchizek/zephyr-flight-software/app/a3gTest/build/cubestack_due/mylib/src/mylib_project-stamp/mylib_project-download.rule"
+		},
+		{
+			"file" : "/home/pchizek/zephyr-flight-software/app/a3gTest/build/cubestack_due/mylib/src/mylib_project-stamp/mylib_project-update.rule"
+		},
+		{
+			"file" : "/home/pchizek/zephyr-flight-software/app/a3gTest/build/cubestack_due/mylib/src/mylib_project-stamp/mylib_project-patch.rule"
+		},
+		{
+			"file" : "/home/pchizek/zephyr-flight-software/app/a3gTest/build/cubestack_due/mylib/src/mylib_project-stamp/mylib_project-configure.rule"
+		},
+		{
+			"file" : "/home/pchizek/zephyr-flight-software/app/a3gTest/build/cubestack_due/mylib/src/mylib_project-stamp/mylib_project-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"mylib_project"
+		],
+		"name" : "mylib_project"
+	}
+}

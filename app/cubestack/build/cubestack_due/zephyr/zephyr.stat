@@ -1,0 +1,65 @@
+ELF Header:
+  Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF32
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              EXEC (Executable file)
+  Machine:                           ARM
+  Version:                           0x1
+  Entry point address:               0x812e9
+  Start of program headers:          52 (bytes into file)
+  Start of section headers:          296620 (bytes into file)
+  Flags:                             0x5000200, Version5 EABI, soft-float ABI
+  Size of this header:               52 (bytes)
+  Size of program headers:           32 (bytes)
+  Number of program headers:         3
+  Size of section headers:           40 (bytes)
+  Number of section headers:         25
+  Section header string table index: 22
+
+Section Headers:
+  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] text              PROGBITS        00080000 000094 0028e6 00 WAX  0   0  4
+  [ 2] devconfig         PROGBITS        000828e8 00297c 000084 00  WA  0   0  4
+  [ 3] rodata            PROGBITS        0008296c 002a00 000b80 00   A  0   0  4
+  [ 4] app_smem          PROGBITS        20070000 0036c4 000000 00   W  0   0  1
+  [ 5] bss               NOBITS          20070000 0036c8 000388 00  WA  0   0  8
+  [ 6] noinit            NOBITS          20070388 0036c8 001900 00  WA  0   0  8
+  [ 7] datas             PROGBITS        20071c88 003580 000010 00  WA  0   0  4
+  [ 8] initlevel         PROGBITS        20071c98 003590 000084 00  WA  0   0  4
+  [ 9] _static_thread_ar PROGBITS        20071d1c 003614 000084 00  WA  0   0  4
+  [10] _k_mem_pool_area  PROGBITS        20071da0 003698 00001c 00  WA  0   0  4
+  [11] _k_queue_area     PROGBITS        20071dbc 0036b4 000010 00  WA  0   0  4
+  [12] .debug_info       PROGBITS        00000000 0036c4 01f989 00      0   0  1
+  [13] .debug_abbrev     PROGBITS        00000000 02304d 006684 00      0   0  1
+  [14] .debug_aranges    PROGBITS        00000000 0296d8 000ae0 00      0   0  8
+  [15] .debug_line       PROGBITS        00000000 02a1b8 008dd4 00      0   0  1
+  [16] .debug_str        PROGBITS        00000000 032f8c 004f0c 01  MS  0   0  1
+  [17] .comment          PROGBITS        00000000 037e98 000011 01  MS  0   0  1
+  [18] .ARM.attributes   ARM_ATTRIBUTES  00000000 037ea9 000031 00      0   0  1
+  [19] .debug_loc        PROGBITS        00000000 037eda 007ab5 00      0   0  1
+  [20] .debug_ranges     PROGBITS        00000000 03f990 001470 00      0   0  8
+  [21] .debug_frame      PROGBITS        00000000 040e00 001604 00      0   0  4
+  [22] .shstrtab         STRTAB          00000000 0485a3 000107 00      0   0  1
+  [23] .symtab           SYMTAB          00000000 042404 0038b0 10     24 512  4
+  [24] .strtab           STRTAB          00000000 045cb4 0028ef 00      0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  y (noread), p (processor specific)
+
+Program Headers:
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
+  LOAD           0x000094 0x00080000 0x00080000 0x034ec 0x034ec RWE 0x4
+  LOAD           0x003580 0x20071c88 0x000834ec 0x00144 0x00144 RW  0x4
+  LOAD           0x0036c8 0x20070000 0x20070000 0x00000 0x01c88 RW  0x8
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     text devconfig rodata 
+   01     datas initlevel _static_thread_area _k_mem_pool_area _k_queue_area 
+   02     bss noinit 

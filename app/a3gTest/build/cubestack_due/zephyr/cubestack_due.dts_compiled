@@ -1,0 +1,132 @@
+/dts-v1/;
+
+/ {
+	#address-cells = <0x1>;
+	#size-cells = <0x1>;
+	model = "Arduino Due with an Atmel SAM3X8E SoC";
+	compatible = "arduino,due", "atmel,sam3x8e", "atmel,sam3x";
+
+	chosen {
+		zephyr,sram = "/memory@20070000";
+		zephyr,flash = "/flash@80000";
+		zephyr,console = "/soc/uart@400E0800";
+	};
+
+	aliases {
+		uart-0 = "/soc/uart@400E0800";
+		i2c-0 = "/soc/i2c@4008C000";
+		i2c-1 = "/soc/i2c@40090000";
+	};
+
+	soc {
+		#address-cells = <0x1>;
+		#size-cells = <0x1>;
+		compatible = "simple-bus";
+		interrupt-parent = <0x1>;
+		ranges;
+
+		nvic: interrupt-controller@e000e100 {
+			compatible = "arm,v7m-nvic";
+			reg = <0xe000e100 0xc00>;
+			interrupt-controller;
+			#interrupt-cells = <0x2>;
+			arm,num-irq-priority-bits = <0x4>;
+			phandle = <0x1>;
+		};
+
+		systick: timer@e000e010 {
+			compatible = "arm,armv7m-systick";
+			reg = <0xe000e010 0x10>;
+			status = "disabled";
+		};
+
+		i2c0: i2c@4008C000 {
+			compatible = "atmel,sam-i2c-twi";
+			clock-frequency = <0x186a0>;
+			reg = <0x4008c000 0x128>;
+			interrupts = <0x16 0x0>;
+			peripheral-id = <0x16>;
+			label = "I2C_0";
+			status = "ok";
+		};
+
+		i2c1: i2c@40090000 {
+			compatible = "atmel,sam-i2c-twi";
+			clock-frequency = <0x186a0>;
+			reg = <0x40090000 0x128>;
+			interrupts = <0x17 0x0>;
+			peripheral-id = <0x17>;
+			label = "I2C_1";
+			status = "ok";
+		};
+
+		uart0: uart@400E0800 {
+			compatible = "atmel,sam-uart";
+			reg = <0x400e0800 0x124>;
+			interrupts = <0x8 0x1>;
+			peripheral-id = <0x8>;
+			status = "ok";
+			label = "UART_0";
+			current-speed = <0x1c200>;
+		};
+
+		usart0: usart@40098000 {
+			compatible = "atmel,sam-usart";
+			reg = <0x40098000 0x130>;
+			interrupts = <0x11 0x0>;
+			peripheral-id = <0x11>;
+			status = "disabled";
+			label = "USART_0";
+		};
+
+		usart1: usart@4009C000 {
+			compatible = "atmel,sam-usart";
+			reg = <0x4009c000 0x130>;
+			interrupts = <0x12 0x0>;
+			peripheral-id = <0x12>;
+			status = "disabled";
+			label = "USART_1";
+		};
+
+		usart2: usart@400A0000 {
+			compatible = "atmel,sam-usart";
+			reg = <0x400a0000 0x130>;
+			interrupts = <0x13 0x0>;
+			peripheral-id = <0x13>;
+			status = "disabled";
+			label = "USART_2";
+		};
+
+		usart3: usart@400A4000 {
+			compatible = "atmel,sam-usart";
+			reg = <0x400a4000 0x130>;
+			interrupts = <0x14 0x0>;
+			peripheral-id = <0x14>;
+			status = "disabled";
+			label = "USART_3";
+		};
+	};
+
+	cpus {
+		#address-cells = <0x1>;
+		#size-cells = <0x0>;
+
+		cpu@0 {
+			device_type = "cpu";
+			compatible = "arm,cortex-m4";
+			reg = <0x0>;
+		};
+	};
+
+	sram0: memory@20070000 {
+		device_type = "memory";
+		compatible = "mmio-sram";
+		reg = <0x20070000 0x18000>;
+	};
+
+	flash0: flash@80000 {
+		compatible = "soc-nv-flash";
+		label = "FLASH_0";
+		reg = <0x80000 0x80000>;
+	};
+};
