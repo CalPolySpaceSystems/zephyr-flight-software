@@ -8,7 +8,6 @@
 
 #include <zephyr.h>
 #include <i2c.h>
-#include <math.h>
 
 // Define buffers?
 

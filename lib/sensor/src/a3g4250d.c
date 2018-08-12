@@ -2,7 +2,6 @@
 // Patrick Chizek
 // Written for CPSS, 6/2017
 
-#include <math.h>
 #include <a3g4250d.h>
 
 //Device Address
